@@ -86,6 +86,7 @@ function createEnemy(x, y) {
                 // Verificar colisões
                 if (!isEnemyColliding(nextX, nextY)) {
                     this.x = nextX;
+                    this.y = nextY;
                 } else {
                     this.direction = Math.floor(Math.random() * 4);
                 }
@@ -150,7 +151,7 @@ function drawEnemies(ctx) {
 function isEnemyColliding(x, y) {
     const tileX2 = Math.floor((x + 8) / tileWidth);
     const tileY2 = Math.floor((y + 20) / tileHeight);
-    const tileX1 = Math.floor((x + 14) / tileWidth);
+    const tileX1 = Math.floor((x + 18) / tileWidth);
 
     if (tileX2 >= mapData.width || tileY2 >= mapData.height) {
         return true; // Fora dos limites do mapa
