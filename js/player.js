@@ -152,8 +152,8 @@ const player = {
             const enemyRect = {
                 left: enemy.x,
                 right: enemy.x + enemy.width,
-                top: enemy.y,
-                bottom: enemy.y + enemy.height
+                top: enemy.y+8,
+                bottom: enemy.y + 10
             };
 
             if (player.frameY === 6 && playerRect.bottom > enemyRect.top && playerRect.top < enemyRect.bottom && playerRect.right > enemyRect.left && playerRect.left < enemyRect.right) {
